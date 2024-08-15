@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Nhập hệ số a: "));
+        var b = parseFloat(prompt("Nhập hệ số b: ")); 
+        var c = parseFloat(prompt("Nhập hệ số c: "));
+
+
+        if (a == 0) {
+            if (b == 0) {
+                console.log("Phương trình có vô số nghiệm");
+            } else {
+                console.log("Phương trình vô nghiệm");
+            }
+        } else {
+            let x = -b / a;
+            console.log("Nghiệm duy nhất là:", x);
+            document.write("Nghiệm duy nhất là: " + x);
+        }
+
+        if (a != 0) {
+            let delta = b * b - 4 * a * c;
+            if (delta > 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                console.log("Phương trình có 2 nghiệm phân biệt: x1 =", x1, ", x2 =", x2);
+            } else if (delta == 0) {
+                let x = -b / (2 * a);
+                console.log("Phương trình có nghiệm kép: x =", x);
+            } else {
+                console.log("Phương trình vô nghiệm");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- // Nhập vào 1 số bất kỳ in ra màn hình các số chia hết cho 3// -->
+
+    <script>
+        var n = parseInt(prompt("Nhập vào một số: "));
+let multiples = [];
+
+for (let i = 1; i < n; i++) {
+    if (i % 3 === 0) {
+        multiples.push(i);
+    }
+}
+
+console.log("Các số nhỏ hơn " + n + " chia hết cho 3 là: " + multiples.join(", "));
+
+    </script>
+    
+</body>
+</html>
